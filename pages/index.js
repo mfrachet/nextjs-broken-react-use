@@ -5,10 +5,6 @@ const Demo = () => {
   const [value, updateCookie, deleteCookie] = useCookie("my-cookie");
   const [counter, setCounter] = useState(1);
 
-  useEffect(() => {
-    deleteCookie();
-  }, [deleteCookie]);
-
   const updateCookieHandler = () => {
     updateCookie(`my-awesome-cookie-${counter}`);
     setCounter((c) => c + 1);
